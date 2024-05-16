@@ -50,7 +50,7 @@ def main():
             output = f.read().splitlines()
 
         total_scores = evaluate_comet_in_batches(source, reference, output, comet_model, batch_size, gpus)
-        with open(f'{eval_dir}/{sf}_evaluation', 'w') as f:
+        with open(f'{eval_dir}/{sf}_evaluation.txt', 'w') as f:
             f.write('\n'.join(map(str, total_scores)))
 
 if __name__ == '__main__':
